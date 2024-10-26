@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    border-radius: border-box;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+     
+    font-family: "Poppins", serif;
+}
+
+/* when click on add expense screen must be blur */
+body#blur.active{
+    filter: blur(1px);
+    user-select: none;
+
+}
+
+
+
+
+
+/**********************************************1st  side contents ***************************************************************/
+
+ .aside{
+    width: 270px;
+    background-color: rgb(0%,62.4%,76.1%);
+    position: fixed;
+    left: 0;
+    top: 0; 
+    padding-right: 50px;
+    height: 100%;
+    z-index: 10;
+
+} 
+
+
+ .aside .image img{
+    width: 150px;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+    border-radius: 50%;
+    z-index: 10;
+} 
+
+.aside .image img:hover{
+    cursor: pointer;
+}
+
+.aside .name p{
+    top: 0;
+    padding-left: 90px;
+    padding-top: 220px;
+    color: white;
+}
+
+.aside .name p:hover{
+    cursor: pointer;
+}
+
+
+ul{
+    list-style: none;
+    
+    
+}
+
+/*********** design menubar ****************/
+.aside .nav-toggler{
+    height: 40px;
+    width: 45px;
+    border: 1px solid rgb(0%,62.4%,76.1%);
+    cursor: pointer;
+    position: fixed;
+    left: 350px;
+    top: 20px;
+    border-radius: 5px;
+    background: white;
+    display: none; /*initially it is hide*/
+    justify-content: center;
+    align-items: center;
+}
+.aside .nav-toggler span{
+    height: 2px;
+    width: 18px;
+    background: rgb(0%,62.4%,76.1%);
+    display: inline-block;
+    position: relative;
+}
+
+.aside .nav-toggler span::before{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background:rgb(0%,62.4%,76.1%);
+    position: absolute;
+    top: -6px;
+    left: 0px;
+
+}
+
+.aside .nav-toggler span::after{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background:rgb(0%,62.4%,76.1%);
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    
+}
+
+.aside .nav{
+    padding-top: 100px;
+    padding-left: 50px;
+    
+}
+
+
+.aside .nav li{
+
+    margin-bottom: 20px;
+    display: block;
+}
+.aside .nav li a{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid white;
+    display: block;
+    padding: 5px 15px;
+}
+
+.aside .nav li a:hover{
+    color: blue;
+}
+.aside .nav li a.active{
+    color: blue;
+}
+
+
+.aside .nav li a i{
+    margin-right: 15px;
+}
+
+
+/*********************************************************** section1 ***********************************************************/
+.section{
+    background-color: white;
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    left: 320px;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 1;
+}
+
+
+button{
+    width: 120px;
+    margin-left: 1000px;
+    margin-top: 40px;
+    border: 1px solid rgb(0%,62.4%,76.1%);
+    border-radius: 5px;
+    padding: 10px;
+    
+    background-color: rgb(0%,62.4%,76.1%);
+    cursor: pointer;
+}
+
+button a{
+    color: white;
+}
+
+
+
+.section .container .row .head{
+    margin-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+} 
+
+.card-boxes{
+    width: 70%;
+    margin-left: 220px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card{
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/********************************************************* Recent *****************************************/
+.section .recent{
+    margin-top: 60px;
+    margin-left: 100px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+}
+
+
+.recent h3{
+    font-weight: 500;
+}
+.recent hr{
+    width: 80%;
+    height: 0;
+}
+
+/************************************************** details *********************************************/
+.details{
+    margin-left: 100px;
+    margin-top: 20px;
+    
+    width: 600px;
+    height: 350px;
+    background-color: rgb(233, 233, 239);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow-y: auto;  /*to get scroll bar*/
+}
+
+/*********************************** scrollbar design ****************************/
+
+/* Custom Scrollbar for WebKit Browsers */
+.details::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+}
+
+.details::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240); /* Track color */
+    border-radius: 5px; /* Round the corners of the track */
+}
+
+.details::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 174, 174); /* Scrollbar color */
+    border-radius: 5px; /* Round the corners of the scrollbar */
+}
+
+.details::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(196, 195, 195); /* Darker color on hover */
+}
+
+/* Hover effect for Firefox */
+.details:hover {
+    scrollbar-color: rgb(179, 177, 177) rgb(240, 240, 240); /* Change thumb color on hover */
+}
+
+/***************** contents *********************/
+
+.detail1{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px; 
+}
+.detail1 i{
+    font-size: 20px;
+}
+.det-head{
+    font-weight: 400;
+}
+
+.det-p{
+    font-size: 10px;
+    
+}
+
+
+
+
+
+
+

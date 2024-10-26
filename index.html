@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css link -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- link popup file -->
+      <link rel="stylesheet" href="popup.html">
+
+      <!-- popup css -->
+       <link rel="stylesheet" href="popup.css">
+
+
+      
+     <!-- fontawesom -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    </head>
+
+<body id="blur">
+   
+      <!-- main content -->
+     <div class="main-container" >
+      <!-- Aside start -->
+       <div class="aside">
+            <div class="image">
+              <img src="images/ui.jpg" alt="">
+              
+            </div>
+            <div class="name">
+              <p>Jancie Chandler</p>
+            </div>
+            <!-- for menu bar -->
+            <div class="nav-toggler">
+              <span></span>
+            </div>
+  
+             <ul class="nav">
+                <li><a href="#" class="active"><i class="fa-solid fa-house" style="color: #fafafa;"></i> Home</a></li>
+                <li><a href="#" onclick="toggle()"><i class="fa-solid fa-square-plus" style="color: #f5f7fa;"></i> Add Expenses</a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #fcfcfc;"></i> Log Out</a></li>
+  
+            </ul>
+      </div>
+  
+  
+       <!-- main content -->
+      <div class="main-content">
+          <!-- home section -->
+           <section class="home section">
+                  <div class="container">
+                     <div class="row">
+  
+                      <!-- reports -->
+                       <div class="report">
+                        
+                         <button><a href=""> <i class="fa-solid fa-chart-simple" style="color: #fcfdfd;"></i> Reports</a> </button>
+                       </div>
+  
+                       <!-- headings -->
+                          <div class="head">
+                              <h3 style="color: green;">Income</h3>
+                              <h3 style="color: red;">Expense</h3>
+                              <h3 style="color: rgb(0%,62.4%,76.1%);">Total</h3>
+                          </div>
+  
+                          <!-- boxes -->
+                          <div class="card-boxes">
+                            <div class="card" style="border: 3px solid green;box-shadow: 0 4px 8px rgba(6, 105, 21, 0.1);">
+                                <h4 style="font-weight: 400;color: green;">10000.00</h4>
+                               
+                            </div>
+                            <div class="card" style="border: 3px solid red;box-shadow: 0 4px 8px rgba(180, 16, 16, 0.1);">
+                                <h4 style="font-weight: 400;color: red;">9000.00</h4>
+                                
+                            </div>
+                            <div class="card" style="border: 3px solid rgb(0%,62.4%,76.1%);box-shadow: 0 4px 8px rgba(48, 191, 239, 0.011);">
+                                <h4 style="font-weight: 400; color:rgb(0%,62.4%,76.1%) ;">1000.00</h4>
+                                
+                            </div>
+                        </div>
+  
+  
+                        <!-- recent expenses -->
+                        <div class="recent">
+  
+                          <h3>Recent Expenses</h3>
+                          <hr>
+                         
+                      </div>
+  
+                      <!-- details -->
+                       <div class="details">
+                       <div class="amount">
+  
+                        <!-- 1st -->
+                        <div class="detail1">
+                          <a href=""><i class="fa-solid fa-landmark" style="color: #2f9335;"></i></a>
+                          <div class="head1">
+                            <h4 class="det-head"> Salary Credited</h4>
+                            <p class="det-p">Salary credit from the com.....</p>
+                          </div>
+                          <div class="cash">
+                            <h4 class="det-head">$5300</h4>
+                            <p class="det-p">12/10/24</p>
+                          </div>
+                        </div>
+  
+  
+                        <div class="detail1">
+                          <a href=""><i class="fa-solid fa-landmark" style="color: red;"></i></a>
+                          <div class="head1">
+                            <h4 class="det-head"> Food</h4>
+                            <p class="det-p">Salary credit from the com.....</p>
+                          </div>
+                          <div class="cash">
+                            <h4 class="det-head">$230</h4>
+                            <p class="det-p">12/10/24</p>
+                          </div>
+                        </div>
+  
+                        <div class="detail1">
+                          <a href=""><i class="fa-solid fa-landmark" style="color: red;"></i></a>
+                          <div class="head1">
+                            <h4 class="det-head"> Grocery</h4>
+                            <p class="det-p">Salary credit from the com.....</p>
+                          </div>
+                          <div class="cash">
+                            <h4 class="det-head">$230</h4>
+                            <p class="det-p">12/10/24</p>
+                          </div>
+                        </div>
+  
+                        <div class="detail1">
+                          <a href=""><i class="fa-solid fa-landmark" style="color: red;"></i></a>
+                          <div class="head1">
+                            <h4 class="det-head"> Loan</h4>
+                            <p class="det-p">Salary credit from the com.....</p>
+                          </div>
+                          <div class="cash">
+                            <h4 class="det-head">$230</h4>
+                            <p class="det-p">12/10/24</p>
+                          </div>
+                        </div>
+  
+                        <div class="detail1">
+                          <a href=""><i class="fa-solid fa-landmark" style="color: red;"></i></a>
+                          <div class="head1">
+                            <h4 class="det-head"> ELectricity</h4>
+                            <p class="det-p">Salary credit from the com.....</p>
+                          </div>
+                          <div class="cash">
+                            <h4 class="det-head">$230</h4>
+                            <p class="det-p">12/10/24</p>
+                          </div>
+                        </div>
+  
+                        <div class="detail1">
+                          <a href=""><i class="fa-solid fa-landmark" style="color: red;"></i></a>
+                          <div class="head1">
+                            <h4 class="det-head"> ELectricity</h4>
+                            <p class="det-p">Salary credit from the com.....</p>
+                          </div>
+                          <div class="cash">
+                            <h4 class="det-head">$230</h4>
+                            <p class="det-p">12/10/24</p>
+                          </div>
+                        </div>
+  
+                       </div>
+                       </div>
+                      
+                         
+                     </div>
+                  </div>
+              
+           </section>
+        </div>
+     </div>
+      
+   
+
+    <!-- javscript -->
+     <script src="script.js"></script>
+</body>
+</html>
