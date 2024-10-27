@@ -1,0 +1,392 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", serif;
+    
+}
+
+.container{
+    background:white;
+    height: 100vh;
+}
+
+
+
+
+/************************************************************************* leftside section ******************************************************************/
+
+.aside{
+    width: 300px;
+    background-color: rgb(0%,62.4%,76.1%);
+    position: fixed;
+    left: 0;
+    top: 0; 
+    padding-right: 50px;
+    height: 100vh;
+    z-index: 10;
+
+} 
+
+
+
+/*********** image ************/
+.aside .image img{
+    width: 150px;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+    border-radius: 50%;
+    z-index: 10;
+} 
+
+.aside .image img:hover{
+    cursor: pointer;
+}
+
+/*************** name *****************/
+.aside .name p{
+    top: 0;
+    padding-left: 90px;
+    padding-top: 220px;
+    color: white;
+}
+
+.aside .name p:hover{
+    cursor: pointer;
+}
+
+/**************** list *******************/
+
+.aside .nav{
+    padding-top: 100px;
+    padding-left: 50px;
+    list-style: none;  /* to remove dots*/
+
+    
+}
+
+/* set list with some gap */
+.aside .nav li{
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* design text contents */
+.aside .nav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid white;  /* to get underline after text*/
+    display: block; /*to get appropriate width for line*/
+    padding: 5px 15px;
+}
+.aside .nav li a:hover{
+    color: blue;
+}
+
+.aside .nav li a i{
+    margin-right: 15px;
+}
+
+
+
+.aside .nav li a.active {
+    color: blue; /* Active link color */
+}
+
+
+/********************************************************************** right side contents ********************************************************************/
+
+
+
+
+.main-content {
+    width: 81%;    
+    background: white; /* Change to your desired color */
+    min-height: 100vh; /* Ensure it takes at least the full height */
+    display: block; /* Keep the block display */
+    position: fixed; /* Position fixed to the left of the aside */
+    left: 300px; /* Aligns next to the aside */
+    
+}
+
+/* to blur when click on add expense */
+.main-content#blur.active {
+    filter: blur(3px);
+}
+
+/**************** report button ***********************/
+.main-content .report button{
+    background-color: rgb(0%,62.4%,76.1%);
+    border: 1px solid rgb(0%,62.4%,76.1%);
+    width: 120px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 1050px;
+}
+
+.main-content .report button a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+/******************** headings ************************/
+
+.head{
+    margin-top: 50px;   
+    display: flex;
+    justify-content: space-evenly;  
+    
+}
+
+/************* 3 divs to display amount ****************/
+
+.card-boxes{
+   
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/***************** card design ***********/
+.card{
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+/************************ recent expenses ***********************/
+
+.main-content .recent{
+    margin-top: 60px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-content .recent h3{
+    font-weight: 500;
+}
+
+.main-content .recent hr{
+    width: 80%;
+}
+
+
+/********************************* details *************************/
+
+
+.details{
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 600px;
+    height: 350px;
+    background-color: rgb(233, 233, 239);
+    border-radius: 5px;
+     overflow-y: auto; /* to get scroll bar  */
+}
+
+/*************************** contents *********************/
+
+/* single content */
+.detail1{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px; 
+}
+
+/* bank icon */
+.detail1 i{
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/* category name */
+.det-head{
+    font-weight: 400;
+}
+
+/* date and bank statement */
+.det-p{
+    font-size: 10px;
+    
+}
+
+
+/************************************************ scroll bar design ******************************************/
+
+/* Custom Scrollbar for WebKit Browsers */
+.details::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+}
+
+.details::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240); /* Track color */
+    border-radius: 5px; /* Round the corners of the track */
+}
+
+.details::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 174, 174); /* Scrollbar color */
+    border-radius: 5px; /* Round the corners of the scrollbar */
+}
+
+.details::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(196, 195, 195); /* Darker color on hover */
+}
+
+/* Hover effect for Firefox */
+.details:hover {
+    scrollbar-color: rgb(179, 177, 177) rgb(240, 240, 240); /* Change thumb color on hover */
+}
+
+
+/************************************************************************ popup ********************************************************************************/
+
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: rgb(245, 243, 241);
+    visibility: hidden;  /* initially hidden */
+    opacity: 0;
+    border-radius: 8px;
+    transition: visibility 0s, opacity 1s linear; 
+    z-index: 10000;
+}
+
+.popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup .form h2 {
+    text-align: start;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.date-selection {
+    margin: 15px 0;
+}
+
+.date-selection label {
+    margin-right: 10px;
+}
+
+#customDate {
+    margin-top: 20px; /* Gap between calendar and income */
+    margin-bottom: 10px;
+}
+
+.cate {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.popup .form .btn1, .popup .form .btn2 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+.btn-active-income {
+    background-color: green; /* Active Income button */
+}
+
+.btn-inactive {
+    background-color: rgb(121, 118, 118); /* Inactive button color */
+}
+
+.btn-active-expense {
+    background-color: rgb(172, 16, 16); /* Active Expense button */
+}
+
+.popup .form .form-element {
+    margin: 15px 0px;
+}
+
+.popup .form .form-element input[type="number"],
+.popup .form .form-element textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(208, 203, 203);
+    border: 1px solid rgb(208, 203, 203);
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.popup .form .form-element textarea {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#submit {
+    text-align: end;
+}
+
+#submit .sub, #submit .cancel {
+    width: 80px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#submit .sub {
+    background-color: green; /* Submit button color */
+    color: white;
+}
+
+#submit .cancel {
+    background-color: rgb(160, 9, 9); /* Cancel button color */
+    color: white;
+}
+
+.form-message {
+    margin-bottom: 10px;
+    display: none; /* Hidden initially */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="expense.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container" id="blur">
+        <a href="#" onclick="toggle(event)"><h1>Open Popup</h1></a>
+    </div>
+    
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="form">
+            <h2>Add Expense</h2>
+            <div id="formMessage" class="form-message" style="display: none; color: green;"></div>
+    
+            <!-- Radio buttons for date selection -->
+            <div class="form-element">
+                <label>
+                    <input type="radio" name="date" value="current" checked onchange="toggleDateInput()"> Current Date
+                </label>
+                <label>
+                    <input type="radio" name="date" value="custom" onchange="toggleDateInput()"> Custom Date
+                </label>
+            </div>
+    
+            <!-- Display selected date -->
+            <div id="currentDateDisplay" style="margin-bottom: 10px;"></div>
+    
+            <!-- Custom date input -->
+            <input type="date" id="customDate" style="display: none;" onchange="updateDisplayedDate()">
+    
+            <div class="cate">
+                <a href="#" class="btn1 btn-active-income" id="incomeBtn" onclick="showIncome(); return false;">Income</a>
+                <a href="#" class="btn2 btn-inactive" id="expenseBtn" onclick="showExpense(); return false;">Expense</a>
+            </div>
+
+            <div class="form-element">
+                <input type="number" id="amount" placeholder="Enter Amount" required>
+            </div>
+
+            <div class="form-element">
+                <select name="category" id="incomes">
+                    <option value="" hidden>Select Income Type</option>
+                    <option value="salary">Salary</option>
+                    <option value="roomRent">Room Rent</option>
+                    <option value="profit">Profit</option>
+                </select>
+                <select name="category" id="expenses" style="display: none;">
+                    <option value="" hidden>Select Expense Type</option>
+                    <option value="food">Food</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="loan">Loan</option>
+                    <option value="electricity">Electricity</option>
+                </select>
+            </div>
+
+            <div class="form-element">
+                <textarea id="description" placeholder="Enter something Here...."></textarea>
+            </div>
+
+            <div class="form-element" id="submit">
+                <button class="sub" id="submitBtn" onclick="submitForm(); return false;">Submit</button>
+                <button class="cancel" id="cancelBtn" onclick="toggle(); return false;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
